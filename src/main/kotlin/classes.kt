@@ -2,18 +2,26 @@ class Pessoa1
 
 class Pessoa2 (var nome: String, var anoNascimento: Int)
 
-class Pessoa3 (var nome: String, var anoNascimento: Int) {
+class Pessoa3 (var nome: String) {
+
+    var ano: Int? = null
+
+   constructor(nome: String, ano: Int) : this(nome) {
+       this.ano = ano
+   }
+
     fun saudacao(){
-        println("olá, meu nome é $nome")
+        println("Olá, meu nome é $nome e nasci em $ano")
+        println(ano)
     }
 }
 
 fun main(){
 
-    val pessoa: Pessoa3 = Pessoa3(nome = "Rainer", anoNascimento = 32)
-    println(pessoa.nome)
-    println(pessoa.anoNascimento)
+    val p2: Pessoa3 = Pessoa3(nome = "Amanda")
+    val p1: Pessoa3 = Pessoa3("Rainer", 1989)
 
-    pessoa.saudacao()
+    p1.saudacao()
+    p2.saudacao()
 
 }
