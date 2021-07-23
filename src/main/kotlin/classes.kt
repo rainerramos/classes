@@ -15,4 +15,6 @@ fun main(){
     var m = Maquina("xpto")
     println(m.nucleos)
     m.nucleos = 10
+
+
 }
