@@ -10,11 +10,30 @@ class Maquina (var marca: String) {
         field = value
     }
 
+    fun ligar(){
+
+    }
+
+    fun processar(){
+
+    }
+
+    fun desligar(){
+
+    }
+
 }
 fun main(){
     var m = Maquina("xpto")
-    println(m.nucleos)
-    m.nucleos = 10
 
+    with(m){
+        ligar()
+        processar()
+        desligar()
+    }
+
+    m.ligar()
+    m.processar()
+    m.desligar()
 
 }
